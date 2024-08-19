@@ -43,12 +43,13 @@ function generarNumeroSecreto() {
     if (listaNumerosSorteados.length == numeroMaximo) {
         asignarTextoElemento('p','ya se sortearon todos los numeros posibles');
     } else {
-    //si el numero generado esta incluido en la lista
-    if (listaNumerosSorteados.includes(numeroGenerado)) {
-        return generarNumeroSecreto();
-    } else {
-        listaNumerosSorteados.push(numeroGenerado);
-        return numeroGenerado;    
+        //si el numero generado esta incluido en la lista
+        if (listaNumerosSorteados.includes(numeroGenerado)) {
+            return generarNumeroSecreto();
+        } else {
+            listaNumerosSorteados.push(numeroGenerado);
+            return numeroGenerado;    
+        }
     }
 }
 function condicionesIniciales() {
